@@ -4,7 +4,7 @@ one:
   name: MyString
   photo: MyString
   bio: MyText
-  posts_conter: 1
+  posts_counter: 1
 
 two:
   name: MyString
