@@ -20,8 +20,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_210402) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.bigint "post_id", null: false
-    t.index ["post_id"], name: "post_comment_index", unique: true
-    t.index ["user_id"], name: "user_comment_index", unique: true
+    t.index ["post_id"], name: "post_comment_index"
+    t.index ["user_id"], name: "user_comment_index"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -29,8 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_210402) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.bigint "post_id", null: false
-    t.index ["post_id"], name: "post_like_index", unique: true
-    t.index ["user_id"], name: "user_like_index", unique: true
+    t.index ["post_id"], name: "post_like_index"
+    t.index ["user_id"], name: "user_like_index"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_210402) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "author_id", null: false
-    t.index ["author_id"], name: "user_post_index", unique: true
+    t.index ["author_id"], name: "user_post_index"
   end
 
   create_table "users", force: :cascade do |t|
