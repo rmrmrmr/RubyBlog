@@ -38,9 +38,16 @@ RSpec.describe Post, type: :model do
   end
 
   it 'validates that title is less than 250 characters' do
-    # rubocop: disable Layout/LineLength
-    subject.title = 'afsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdafsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd1'
-    # rubocop: enable Layout/LineLength
+    subject.title = 'a' * 251
     expect(subject).to_not be_valid
+  end
+
+  # mehtods tests
+  it 'tests that latest_comments is a valid method' do
+    expect(subject.latest_comments).to eql([])
+  end
+
+  it 'should add the post to the posts_counter of the author' do
+    expect(@user.posts_counter).to eql(1)
   end
 end
