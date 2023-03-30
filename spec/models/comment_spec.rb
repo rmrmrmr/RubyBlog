@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
   before(:each) do
     @user = User.new(name: 'Jack Sparrow', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-    bio: 'I\'m Captain Jack Sparrow!', posts_counter: 0)
+                     bio: 'I\'m Captain Jack Sparrow!', posts_counter: 0)
     @post = Post.new(author: @user, title: 'I got a new monitor!', text: 'My productivity has been at an all time high')
   end
   subject { Comment.new(text: 'This is an awesome comment!', user: @user, post: @post) }
 
   before { subject.save }
 
-  #methods tests
+  # methods tests
   it 'should add the comment to the comment_counter of the post' do
     expect(@post.comments_counter).to eql(1)
   end
