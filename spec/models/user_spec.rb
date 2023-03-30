@@ -25,4 +25,9 @@ RSpec.describe User, type: :model do
     subject.posts_counter = -1
     expect(subject).to_not be_valid
   end
+
+  # methods tests
+  it 'tests that latest_posts is a valid method' do
+    expect(subject.latest_posts).to eql([])
+  end
 end
