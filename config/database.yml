@@ -27,11 +27,11 @@ development:
   adapter: postgresql
   encoding: unicode
   database: Blog
-  host: 192.168.0.17
+  host: 172.20.160.1
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
   password: 7714
-
+  
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
