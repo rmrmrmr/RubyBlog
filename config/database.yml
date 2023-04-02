@@ -27,7 +27,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: Blog
-  host: localhost
+  host: 172.20.160.1
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
   password: 7714
