@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = 'This is the profile page of the selected user'
+    @users = 'This is the profile page of the selected user.'
   end
 end
