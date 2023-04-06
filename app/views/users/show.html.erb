@@ -1,2 +1,9 @@
-<section>
+<section class="flex flex-col gap-4 h-screen pt-0 mt-5 px-5">
+  <%= render 'partials/user', user: @user %>
+  <div id="bio_placeholder" class="border-2 border-black h-1/5 p-2 flex flex-col text-sm">
+    <h2 class="font-bold">Bio</h2>
+    <h3 class="text-xs"><%=truncate @user.bio, length: 300 %></h3>
+  </div>
+  <%= render partial:"partials/post", collection: @posts%>
+  <%= link_to 'See all posts', user_posts_path(@user), class: 'border-2 border-black w-2/6 py-1 text-center self-center text-sm' %>
 </section>
