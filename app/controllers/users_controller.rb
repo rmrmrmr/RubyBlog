@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   def index
-    @users = 'Here is a list of users.'
+    @users = User.all
   end
 
   def show
-    @users = 'This is the profile page of the selected user.'
+    @user = User.find(params[:id])
+    @posts = @user.latest_posts
   end
 end
