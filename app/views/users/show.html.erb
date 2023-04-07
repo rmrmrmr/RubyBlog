@@ -5,5 +5,8 @@
     <h3 class="text-xs"><%=truncate @user.bio, length: 300 %></h3>
   </div>
   <%= render partial:"partials/post", collection: @posts%>
-  <%= link_to 'See all posts', user_posts_path(@user), class: 'border-2 border-black w-2/6 py-1 text-center self-center text-sm' %>
+  <div class="flex justify-around">
+    <%= link_to "New Post", new_user_post_path(@user.id), class: 'border-2 border-black w-2/6 py-1 text-center self-center text-sm' %>
+    <%= link_to 'See all posts', user_posts_path(@user), class: 'border-2 border-black w-2/6 py-1 text-center self-center text-sm' %>
+  </div>
 </section>
