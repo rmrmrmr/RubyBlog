@@ -7,11 +7,12 @@
         <h3>Comments: <%= @post.comments_counter %></h3>
       </div>
     </div>
-    <h2 class="text-sm"><%= truncate @post.text, length: 590 %></h2>
+    <h2 class="text-sm"><%= truncate @post.text, length: 480 %></h2>
   </div>
   <div class="border-2 border-black h-2/6 p-2 flex flex-col text-base gap-1">
     <% @post.latest_comments.each do |comment| %>
           <%= render "partials/comments", comment: comment %>
     <% end %>
   </div>
+  <%= link_to "New comment", new_user_post_comment_path(@user.id, @post.id), class: 'border-2 border-black w-2/6 py-1 text-center self-center text-sm' %>
 </section>
