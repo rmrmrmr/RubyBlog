@@ -26,15 +26,15 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  # database: blog 
-  # host: localhost 
-  # username: juanca 
-  # password: 7490 
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: Blog
-  host: 172.20.160.1
-  username: postgres
-  password: 7714
+  database: blog 
+  host: localhost 
+  username: juanca 
+  password: 7490 
+  #database: Blog
+  #host: 172.20.160.1
+  #username: postgres
+  #password: 7714
   
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -69,15 +69,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  # database: blog_test 
-  # host: localhost 
-  # username: juanca 
-  # password: 7490 
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: Blog_test
-  host: 172.20.160.1
-  username: postgres
-  password: 7714
+  database: blog_test 
+  host: localhost 
+  username: juanca 
+  password: 7490 
+  #database: Blog_test
+  #host: 172.20.160.1
+  #username: postgres
+  #password: 7714
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
