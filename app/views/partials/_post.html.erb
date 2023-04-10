@@ -1,5 +1,5 @@
 <%= link_to user_post_path(@user, post), class: "h-1/6 border-2 border-black p-3 text-sm flex flex-col justify-between post-identifier" do %>
-  <h2><%= post.title %></h2>
+  <h2 class='title-identifier'><%= post.title %></h2>
   <h3 class="text-xs"><%= truncate post.text, length: 108 %></h3>
   <div class="text-[.6rem] flex gap-4 self-end">
     <h4>Comments: <%= post.comments_counter %></h4>
