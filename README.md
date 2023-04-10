@@ -67,54 +67,70 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
 > Under construction...
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> To get a local copy up and running it in your machine, follow the next steps. 
+To get the content of this project locally you need to run the following commands in your terminal:
+
+and follow these steps.
+
 ### Prerequisites
 
-In order to run this project you need:
-
-- Internet connection.
-- Basic knowledge of Git/Terminal.
-- Visual Studio Code Installed.
-- Ruby installed.
-- Ruby on Rails installed.
+- IDE(code editor) like: **Vscode**, **Sublime**, etc.
+- [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-### Terminal
-
-> cd my-folder
-> git clone git@github.com:d4nQw3rty/the-art-of-development-blog.git
+1. Download the **Zip** file or clone the repo with:
+ ```bash
+git clone git@github.com:rmrmrmr/RubyBlog.git
+```
+2. To access cloned directory run:
+```bash
+cd curriculum 
+```
 
 ### Install
 
-Install almost all dependencies/gems of the project by running:
+> To install linters and other project's dependencies run:
 
-- This one will install all gems inside GemFile including Rubocop:
-> `Bundle install` or `Bundle i`
-- This one will install stylelinter:
-> npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```bash
+ bundle install
+```
+
 ### Usage
 
 To run the project, execute the following command:
-> `rails server` or `rails s`
-To run stylinter:
-> `npx stylelint "**/*.{css,scss}"`
-To run rubocop:
-> `rubocop`
+1. setup the database:
+```
+rails db:setup
+```
+2. run the rails server:
+```
+rails s
+```
+
 ### Run tests
 
-To run tests, run the following command:
+```
+rspec spec
+```
 
-> bin/rails test test/models/article_test.rb
+For tracking linter errors in Ruby files run:
+ 
+ ```
+   rubocop . 
+ ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 👥 Authors <a name="authors"></a>
 
