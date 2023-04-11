@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'User show', type: :feature do
-  scenario 'show user picture' do
+  scenario "show post's title" do
     visit user_post_path(user_id: 1, id: 1)
     expect(page).to have_selector('h1', text: 'Hello')
   end
 
-  scenario 'show user picture' do
+  scenario "show post's author" do
     visit user_post_path(user_id: 1, id: 1)
     expect(page).to have_selector('h1', text: 'Tom')
   end
