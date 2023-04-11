@@ -1,14 +1,10 @@
 <section class="flex flex-col gap-4 h-screen pt-0 mt-5 px-5">
   <%= render 'partials/user', user: @user %>
-  <% @posts.each do |post| %>
+  <% @user.posts.each do |post| %>
     <%= render partial:'partials/post', locals: { post: post } %>
     <div class="h-[14%] border-2 border-black px-3 py-1 text-[0.6rem] flex flex-col justify-between mt-[-0.95rem]">
-    <% if post.latest_comments.empty? %>
-      <h1 class="text-base mt-auto mb-auto font-semibold">No comments yet :(</h1>
-    <% else %>
-      <% post.latest_comments.each do |comment| %>
+      <% post.comments.each do |comment| %>
         <%= render "partials/comments", comment: comment %>
-      <% end %>
     <% end %>
     </div>
   <% end %>
