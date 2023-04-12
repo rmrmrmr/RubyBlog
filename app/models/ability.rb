@@ -6,6 +6,7 @@ class Ability
 
       if user.admin?
         can :destroy, Post
+        can :destroy, Comment
       else
         can :read, :all
       end

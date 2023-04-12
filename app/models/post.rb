@@ -16,4 +16,10 @@ class Post < ApplicationRecord
     counter = @user.posts.count
     @user.update(posts_counter: counter)
   end
+
+  def update_comments_counter(post_id)
+    @post = Post.find(post_id)
+    counter = @post.comments.count
+    @post.update(comments_counter: counter)
+  end
 end

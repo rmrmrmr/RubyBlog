@@ -1,4 +1,9 @@
 <div class="flex items-start comment-identifier">
   <h1 class="font-bold commenter-identifier"><%= comment.user.name %>:&nbsp;</h1>
-  <h2 class="comment-text-identifier"><%= comment.text %></h2>
+  <h2 class="comment-text-identifier"><%= comment.text %> <%= comment.id %></h2>
+  <% if can? :destroy, Comment %>
+    <div class="border-2 border-black text-xs ml-auto px-2">
+      <%= button_to 'Delete comment',  user_post_comment_path(user_id: comment.user.id, post_id: @post.id, id: comment.id), method: :delete %>
+    </div>
+  <% end %>
 </div>
