@@ -14,8 +14,11 @@
           <%= render "partials/comments", comment: comment %>
     <% end %>
   </div>
-  <div class="flex">
+  <div class="flex justify-between">
     <%= button_to "Like", user_post_likes_path(@user.id, @post.id), method: :post, class: 'border-2 border-black text-sm text-center self-center h-[100%] px-2' %>
-    <%= link_to "New comment", new_user_post_comment_path(@user.id, @post.id), class: 'border-2 border-black w-2/6 py-1 text-center self-center text-sm ml-auto' %>
+    <% if can? :destroy, Post %>
+      <%= button_to "Delete", { action: 'destroy', id: @post.id }, method: :delete, class: 'border-2 border-black text-sm text-center self-center h-[100%] px-2 py-1' %>
+    <% end %>
+    <%= link_to "New comment", new_user_post_comment_path(@user.id, @post.id), class: 'border-2 border-black w-2/6 py-1 text-center self-center text-sm' %>
   </div>
 </section>
