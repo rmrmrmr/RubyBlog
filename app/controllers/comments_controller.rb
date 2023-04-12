@@ -32,8 +32,8 @@ class CommentsController < ApplicationController
           @post.update_comments_counter(params[:post_id])
           redirect_to user_post_path(@user.id, @post.id)
         else
-          flash.now[:error] = "Error: failed to delete comment"
-          render :new, locals: { comment: comment }
+          flash.now[:error] = 'Error: failed to delete comment'
+          render :new, locals: { comment: }
         end
       end
     end
