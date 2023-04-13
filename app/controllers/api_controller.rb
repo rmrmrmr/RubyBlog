@@ -15,5 +15,6 @@ class ApiController < ActionController::API
     rescue JWT::DecodeError => e
       render json: { errors: e.message }, status: :unauthorized
     end
+    # rubocop:enable Lint/DuplicateBranch
   end
 end
