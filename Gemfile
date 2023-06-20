@@ -78,3 +78,6 @@ group :test do
 end
 
 gem 'tailwindcss-rails', '~> 2.0'
+
+# Use devise for authentication
+gem 'devise'
