@@ -10,7 +10,7 @@
     <h2 class="text-sm"><%= truncate @post.text, length: 480 %></h2>
   </div>
   <div class="border-2 border-black h-2/6 p-2 flex flex-col text-base gap-1">
-    <% @post.latest_comments.each do |comment| %>
+    <% @post. comments.each do |comment| %>
           <%= render "partials/comments", comment: comment %>
     <% end %>
   </div>
