@@ -8,7 +8,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -62,12 +61,6 @@
 - **Sign in**
 - **Adding posts for each user**
 - **Liking multiple posts**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Under construction...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,10 +128,18 @@ For tracking linter errors in Ruby files run:
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Ricardo Martínez**
-
 - GitHub: [@rmrmrmr](https://github.com/rmrmrmr)
 - Twitter: [@ricmtza](https://twitter.com/ricmtza)
 - LinkedIn: [LinkedIn](www.linkedin.com/in/ricardo-mag)
+
+👤 **Juan Carlos Sanchez**
+- GitHub: [@Juank628](https://github.com/Juank628)
+- Twitter: [@juancadev81](https://twitter.com/juancadev81)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/juan-carlos-sanchez-zunino)
+
+👤 **Alejandro**
+- GitHub: [Alejandro](https://github.com/Alejandro-Bernal-M)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alejandro-bernal-marin)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
