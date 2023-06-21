@@ -10,12 +10,14 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :posts_counter, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  Roles = [ :admin, :default ]
+  # rubocop:disable Naming/ConstantName
+  Roles = %i[admin default].freeze
+  # rubocop:enable Naming/ConstantName
 
   def admin?
-    self.role == 'admin'
+    role == 'admin'
   end
-  
+
   def latest_posts
     posts.order(created_at: :desc).limit(3).reverse
   end
