@@ -11,9 +11,15 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5).reverse
   end
 
-  def update_posts_counter
-    author.increment!(:posts_counter)
+  def update_posts_counter(user_id)
+    @user = User.find(user_id)
+    counter = @user.posts.count
+    @user.update(posts_counter: counter)
   end
 
-  after_save :update_posts_counter
+  def update_comments_counter(post_id)
+    @post = Post.find(post_id)
+    counter = @post.comments.count
+    @post.update(comments_counter: counter)
+  end
 end

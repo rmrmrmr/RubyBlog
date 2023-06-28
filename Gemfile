@@ -81,3 +81,6 @@ gem 'tailwindcss-rails', '~> 2.0'
 
 # Use devise for user authentication
 gem 'devise'
+
+# Use cancancan for user authorization
+gem 'cancancan'

@@ -2,6 +2,8 @@
   <img src=<%= user.photo %> alt="Profile picture" class="aspect-[1/1] w-1/4 object-cover">
   <div class="w-3/4 h-[95%] border-2 border-black flex justify-between items-center px-5 py-4">
     <h2 class="text-2xl font-medium"><%= user.name %></h2>
+    <%# delete the following line when done with the authorization milestone %>
+    <h3 class="text-xs"><%= user.role %></h3>
     <h3 class="text-xs self-end">Number of posts: <%= user.posts_counter %></h3>
   </div>
 <% end %>
