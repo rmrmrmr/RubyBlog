@@ -5,8 +5,8 @@ class Ability
     user ||= User.new
 
     if user.admin?
-      can :destroy, Post
-      can :destroy, Comment
+      can :destroy, Post, author_id: user.id
+      can :destroy, Comment, user_id: user.id
     else
       can :read, :all
     end
