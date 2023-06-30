@@ -142,6 +142,12 @@ For tracking linter errors in Ruby files run:
 - GitHub: [@iqbal-elham](https://github.com/Iqbal-Elham)
 - linkedIn: [@iqbal-elham](https://www.linkedin.com/in/iqbal-elham)
 
+👤 **Davian Beroni**
+
+- GitHub: [dadadon](https://github.com/dadadon)
+- Twitter: [Davian Beroni](https://twitter.com/davianberoni)
+- LinkedIn: [Davian Beroni](https://www.linkedin.com/in/davian-beroni/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
