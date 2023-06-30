@@ -2,7 +2,6 @@ class Api::V1::CommentsController < ApiController
   before_action :authorize_request, only: [:create]
 
   def index
-    # /api/v1/users/:user_id/posts/:post_id/comments(.:format)
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
 
