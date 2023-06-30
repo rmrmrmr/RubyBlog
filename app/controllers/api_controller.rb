@@ -16,4 +16,5 @@ class ApiController < ActionController::API
       render json: { errors: e.message }, status: :unauthorized
     end
   end
+  # rubocop:enable Lint/DuplicateBranch
 end
