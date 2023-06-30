@@ -84,3 +84,6 @@ gem 'devise'
 
 # Use cancancan for user authorization
 gem 'cancancan'
+
+# Use JsonWebToken (JWT) for token based authentication
+gem 'jwt'
