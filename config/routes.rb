@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'users#index'
 
-  namespace :api, defaults: { format: 'json' } do
+  namespace :api do
     namespace :v1 do
-      post 'login', to: 'login#auth'
+      # post 'login', to: 'login#auth'
       resources :users, only: [:index, :show] do
         resources :posts, only: [:index] do
           resources :comments, only: [:index, :create]
